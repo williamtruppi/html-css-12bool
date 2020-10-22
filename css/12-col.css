@@ -4,6 +4,14 @@ body [class*="col-"]{
   border: 1px solid black;
 }
 
+/* riduco un po' l'altezza per mostrare come
+   le colonne siano correttamente innestate */
+.col-6 [class*="col-"]{
+  height: 240px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
 *{
   margin: 0;
   padding: 0;
