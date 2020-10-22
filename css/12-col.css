@@ -6,7 +6,7 @@ body [class*="col-"]{
 
 /* riduco un po' l'altezza per mostrare come
    le colonne siano correttamente innestate */
-.col-6 [class*="col-"]{
+.row > .col-6 [class*="col-"]{
   height: 240px;
   background-color: yellow;
   border: 1px solid black;
@@ -19,11 +19,15 @@ body [class*="col-"]{
 }
 
 .container{
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
-.container::after{
+.row{
+  max-width: 100%;
+}
+
+.row::after{
   clear: both;
   content: "";
   display: table;
